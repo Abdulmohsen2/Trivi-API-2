@@ -1,11 +1,11 @@
-## Full Stack Web Developer Nanodegree (nd0044 v2)
-This is the public repository for Udacity's Full-Stack Nanodegree program. Here, you can find starter-code the following projects:
+## Tivia API Full stack devoloper Project
 
-* *01_fyyur/starter_code* - This is the project from C1. SQL and Data Modeling for the Web
-* *02_trivia_api/starter* - This is the project from C2. API Development and Documentation
-* *03_coffee_shop_full_stack/starter_code* - This is the project from C3. Identity and Access Management
-* *capstone* - This is the final project of this Nanodegree.
+in this Project the API will interact with the user by asking the user the questions and the user will answer it
 
-Feel free to suggest edits in the current repo by raising a PR.
-
-
+The questions is divided to 6 categories
+1- Science
+2- Art
+3- sport
+4- Entertainment
+5- History
+6- Geography
