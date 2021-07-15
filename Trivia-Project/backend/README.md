@@ -42,7 +42,7 @@ export FLASK_ENV=development
 flask run
 ```
 
-### API Reference
+# API Reference
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ The API will return three error types when requests fail:
 
 ### GET/categories/{category_id}/questions
 
-- General: Returns a list of question objects belonging to `category_id `. Returns questions, total number of questions and current categories of selected questions.
+- General: Returns a list of question objects belonging to `category_id `. Returns current categories with it's questions, total number of questions, and success value.
 - Sample: `curl http://127.0.0.1:5000/categories/5/questions`
 - output:
 
@@ -121,7 +121,7 @@ The API will return three error types when requests fail:
 
 ### GET/questions
 
-- General: Return a list of questions objecs, categories, current_category, success value and total number of questions
+- General: Return a list of questions objecs, categories, current_category,id of question, success value and total number of questions
 - Sample: `curl http://127.0.0.1:5000/questions`
 - output:
 
@@ -214,7 +214,7 @@ The API will return three error types when requests fail:
 
 ### POST/questions
 
-- Genral: Creates a new question using the submitted question, answer, difficulty and category. Returns created message, success value, and number of questions.
+- Genral: Creates a new question, answer, difficulty and category. Returns question id, created message, success value, and number of questions.
 - Sample: `curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"question": "What is the capital of saudi arabi?", "answer":"Riyadh", "difficulty":"3", "category":"2"}'`
 - output:
 
