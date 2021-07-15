@@ -69,7 +69,7 @@ The API will return three error types when requests fail:
 
 ## Endpoints
 
-# GET/categories
+### GET/categories
 
 - General: Return all categories in object with `key:value` and success value
 - Sample: `curl http://127.0.0.1:5000/categories`
@@ -89,7 +89,7 @@ The API will return three error types when requests fail:
 }
 ```
 
-# GET/categories/{category_id}/questions
+### GET/categories/{category_id}/questions
 
 - General: Returns a list of question objects belonging to `category_id `. Returns questions, total number of questions and current categories of selected questions.
 - Sample: `curl http://127.0.0.1:5000/categories/5/questions`
@@ -119,7 +119,7 @@ The API will return three error types when requests fail:
 }
 ```
 
-# GET/questions
+### GET/questions
 
 - General: Return a list of questions objecs, categories, current_category, success value and total number of questions
 - Sample: `curl http://127.0.0.1:5000/questions`
@@ -212,7 +212,7 @@ The API will return three error types when requests fail:
 }
 ```
 
-## POST/questions
+### POST/questions
 
 - Genral: Creates a new question using the submitted question, answer, difficulty and category. Returns created message, success value, and number of questions.
 - Sample: `curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"question": "What is the capital of saudi arabi?", "answer":"Riyadh", "difficulty":"3", "category":"2"}'`
@@ -227,7 +227,7 @@ The API will return three error types when requests fail:
 }
 ```
 
-## DELETE/questions/{questions_id}
+### DELETE/questions/{questions_id}
 
 - General: Deletes the question bu using the passed `question_id` and returns message and success value.
 - Sample: `curl -X DELETE http://127.0.0.1:5000/questions/12`
@@ -240,7 +240,7 @@ The API will return three error types when requests fail:
 }
 ```
 
-## POST/quizzes
+### POST/quizzes
 
 - General: Returns a random question that user has not seen yet from the selected category that user has chosen. Frontend needs to submit `previous_questions` and `quiz_category`.
 - Sample: `curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [10, 13, 16], "quiz_category": {"id": "3", "type": "Science"}}'`
