@@ -12,10 +12,6 @@
 pip install -r requirements.txt
 ```
 
-```bash
-pip install -r requirements.txt
-```
-
 This will install all of the required packages we selected within the `requirements.txt` file.
 
 4. **Key Dependencies**
@@ -41,12 +37,39 @@ From within the `./src` directory first ensure you are working using your create
 To run the server, execute:
 
 ```bash
-flask run --reload
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
 ```
 
-The `--reload` flag will detect file changes and restart the server automatically.
+### API Reference
 
-## ToDo Tasks
+## Getting Started
+
+- Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://127.0.0.1:5000/, which is set as a proxy in the frontend configuration.
+- Authentication: This version of the application does not require authentication or API keys.
+
+## Error Handling
+
+Errors are returned as JSON objects in the following format:
+
+```bash
+{
+    "success": False,
+    "error": 404,
+    "message": "resource not found"
+}
+```
+
+The API will return three error types when requests fail:
+
+- 404: Resource Not Found
+- 400: Bad Request
+- 422: Unprocessable
+
+## Endpoints
+
+- General: Return all categories in object with `key:value` and success value
 
 These are the files you'd want to edit in the backend:
 
